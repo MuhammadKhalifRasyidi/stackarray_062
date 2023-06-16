@@ -54,3 +54,62 @@ public:
 		}
 	}
 };
+
+int main() {
+	stackarray stack;
+	char ch;
+	while (true)
+	{
+		cout << endl << "Menu";
+		cout << endl << "1. Menambahkan data kedalam list" << endl;
+		cout << "2. Menghapus data dari dalam list" << endl;
+		cout << "3. Menampilkan semua data didalam list" << endl;
+		cout << "5. Keluar" << endl;
+		cout << endl << "Masukkan pilihan (1-5): ";
+		cin >> ch;
+		switch (ch)
+		{
+		case '1':
+		{
+			int element;
+			cout << "masukan element" << endl;
+			cin >> element;
+			stack.push(element);
+
+		}
+		break;
+
+		case '2':
+		{
+			if (stack.empty())
+			{
+				cout << endl << "List Kosong" << endl;
+				break;
+			}
+			else
+				stack.pop();
+		
+		}
+		break;
+
+		case '3':
+		{
+
+			stack.display();
+
+		}
+		break;
+
+		case '5':
+		{
+			exit(0);
+		}
+		break;
+	defaul:
+		{
+			cout << "Pilihan salah !." << endl;
+		}
+		break;
+		}
+	}
+}
