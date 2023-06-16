@@ -30,8 +30,11 @@ public:
 
 	void pop() {
 		if (empty()) { //step 1
-			cout << "n\stack is empty. cannot pop." << endl; //1.a
+			cout << "\nstack is empty. cannot pop." << endl; //1.a
 			return; //1.b
 		}
+
+		cout << "\nthe popped element is : " << stack_array[top] << endl; //step 2
+		top--; //step 3 decremenet
 	}
 };
